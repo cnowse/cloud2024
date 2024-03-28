@@ -62,7 +62,7 @@ public class PayController {
     @GetMapping("/{id}")
     @Operation(summary = "按照ID查流水", description = "查询支付流水方法")
     public ResultData<Pay> getById(@PathVariable("id") Integer id) {
-        log.info("8001被调用");
+        log.info("8002被调用");
         return ResultData.success(payService.getById(id));
     }
 
