@@ -10,7 +10,8 @@ import cn.cnowse.resp.ResultData;
 /**
  * @author Jeong Geol 2024-3-28
  */
-@FeignClient("cloud-payment-service")
+// @FeignClient("cloud-payment-service")
+@FeignClient("cloud-gateway")
 public interface PayFeignApi {
 
     @GetMapping("/pay/add")
@@ -30,5 +31,17 @@ public interface PayFeignApi {
 
     @GetMapping(value = "/pay/micrometer/{id}")
     String myMicrometer(@PathVariable("id") Integer id);
+
+    /**
+     * GateWay进行网关测试案例01
+     */
+    @GetMapping(value = "/pay/gateway/get/{id}")
+    ResultData getById(@PathVariable("id") Integer id);
+
+    /**
+     * GateWay进行网关测试案例02
+     */
+    @GetMapping(value = "/pay/gateway/info")
+    ResultData<String> getGatewayInfo();
 
 }
