@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import cn.hutool.core.util.IdUtil;
 
 /**
+ * 中文备注测试
+ *
  * @author Jeong Geol 2024-3-31
  */
 @RestController
